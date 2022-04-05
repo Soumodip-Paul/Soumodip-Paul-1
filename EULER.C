@@ -34,13 +34,13 @@ void elu(float x, float y, float xp, float h)
 		y=y+dy;
 		printf("%5d\t%10.6f\t%10.6f\n",i,x,y);
 	}
-	printf("\nfinal result value of y at x=%f      %d is %f",x,y,n);
+	printf("\nfinal result value of y(x=%f) =\t%f \nn = %d",x,y,n);
 }
 
  float F(float x,float y)
  {
 	float f;
-	f=x+y;//f=2.0*y/x;
+	f=(x-y)/3;//f=2.0*y/x;
 	return f;
  }
 

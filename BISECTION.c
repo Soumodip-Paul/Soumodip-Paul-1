@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include<math.h>
 //#define F(x) (x)*(x)+(x)-2
-#define F(x) (x)*(x)*(x)-18
-#define EPS 0.00005
+#define F(x) (x)*(x)*(x)-8
+#define EPS 0.000001
 
 float x1,x2,x0,f0,f1,f2;
 int itr;     // count for iterations
@@ -12,13 +12,18 @@ int itr;     // count for iterations
 void read_check(); //function for reading inputs and checking for validity
 float bisec(float x1, float x2 ); // function for bisection method
 
-void main(void)
+int main()
 {
 
 read_check();
+if (f1 == 0 || f2 == 0 ){
+	printf("\nroot=%f", f1 == 0 ? x1 : x2 );
+	return 0;
+}
 printf("\nroot=%f",bisec(x1,x2));
 printf("\niteration=%d",itr);
 
+return 0;
 }
 
 /* function for input */
@@ -35,7 +40,7 @@ void read_check()
 		f2=F(x2);
 		if(f1*f2 > 0)
 		{ 
-			printf("\nsorry wrong input\nrenter your data-->");			
+			printf("\nsorry wrong input\nenter your data-->");			
 			continue;
 		}
 		else 
