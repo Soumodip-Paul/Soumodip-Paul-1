@@ -1,3 +1,0 @@
-Id= 1
-Name= ram
-Salary= 20000.00
