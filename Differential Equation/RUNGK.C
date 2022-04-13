@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<math.h>
+#include<conio.h>
 float F(float,float);
 void rung(float,float,float,float);
 
@@ -9,7 +10,7 @@ void main()
 {
 	int n;
 	float x,y,xp,h;
-	clrscr();
+	system("cls");
 	printf("\nEnter the initial value of x=");
 	scanf("%f",&x);
 	printf("\nEnter the initial value of y=");

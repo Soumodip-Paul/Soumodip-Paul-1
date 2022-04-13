@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include<math.h>
+#include<conio.h>
 //#define F(x) (x)*(x)+(x)-2
 #define F(x) (x)*(x)*(x)-18
 #define EPS 0.00005
@@ -11,15 +12,16 @@ int itr;     // count for iterations
 
 float secant(float , float ); // function for Secant method
 
-void main(void) 
+int main(void) 
 {
 float x0,x1;
-//clrscr();
+system("cls");
 printf(" enter the value of initial guess=");
 scanf("%f %f",&x0,&x1);
 printf("\nroot=%f",secant(x0,x1));
 printf("\niteration=%d",itr);
-//getch();
+getch();
+return 0;
 }
 
 	float secant(float x0,float x1)

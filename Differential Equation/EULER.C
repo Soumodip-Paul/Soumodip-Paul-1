@@ -2,13 +2,14 @@
 
 #include<stdio.h>
 #include<math.h>
+#include<conio.h>
 float F(float,float);
 void elu(float,float,float,float);
 
-void main()
+int main()
 {
 	float x,y,xp,h;
-//	clrscr();
+	system("cls");
 	printf("\nEnter the initial value of x=");
 	scanf("%f",&x);
 	printf("\nEnter the initial value of y=");
@@ -18,7 +19,8 @@ void main()
 	printf("\nEnter the step size h=");
 	scanf("%f",&h);
 	elu(x,y,xp,h);
-//	getch();
+	getch();
+	return 0;
 }
 void elu(float x, float y, float xp, float h)
 {

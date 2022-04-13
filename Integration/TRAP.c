@@ -2,13 +2,14 @@
 
 #include<stdio.h>
 #include<math.h>
+#include<conio.h>
 float F(float );
 void trape(float,float,float);
-void main()
+int main()
 {
 
 	float a,b,h;
-	clrscr();
+	system("cls");
 	printf("\nEnter the initial value of x=");
 	scanf("%f",&a);
 	printf("\nEnter the final value of x=");
@@ -17,6 +18,7 @@ void main()
 	scanf("%f",&h);
 	trape(a,b,h);
 	getch();
+	return 0;
 }
 
 void trape(float a,float b,float h)
@@ -34,7 +36,7 @@ void trape(float a,float b,float h)
 float F(float x)
 {
 	float f;
-	f=1.0-exp(-x/2.0);
+	f= powf(4/M_PI, 0.5) * exp(-(x * x));
 	return f;
  }
 
